@@ -1,6 +1,6 @@
-import './polyfills'
-export * as validators from './validators'
-export { reflectPromise, cancelPromise } from './promises'
+import "./polyfills"
+export * as validators from "./validators"
+export { reflectPromise, cancelPromise } from "./promises"
 export {
   valueIsEvent,
   getEventValue,
@@ -8,8 +8,8 @@ export {
   getInitialValue,
   getDecrementValue,
   getValidators
-} from './values'
-export deepEqual from 'deep-equal'
+} from "./values"
+export isEqual from "react-fast-compare"
 
 // async function validateField(name, value) {
 //   if (!this.shouldFieldValidate(name, value)) {

@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import {
-  deepEqual,
+  isEqual,
   cancelPromise,
   reflectPromise,
   getNextValue,
@@ -97,7 +97,7 @@ export default function connectForm(ComposedComponent) {
             }
           }
         })
-      } else if (!deepEqual(nextProps.initialValue, this.props.initialValue)) {
+      } else if (!isEqual(nextProps.initialValue, this.props.initialValue)) {
         Object.keys(nextProps.initialValue).forEach(name => {
           if (this.state.fields[name]) {
             this.resetField(name, null, nextProps.initialValue)

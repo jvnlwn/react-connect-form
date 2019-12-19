@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-import { deepEqual, getEventValue } from "../utils"
+import { isEqual, getEventValue } from "../utils"
 
 export default function connectField(ComposedComponent) {
   return class Field extends Component {
@@ -38,7 +38,7 @@ export default function connectField(ComposedComponent) {
         this.actions.registerField(nextProps.name, nextProps)
       }
       if (
-        !deepEqual(nextProps.initialValue, this.props.initialValue) ||
+        !isEqual(nextProps.initialValue, this.props.initialValue) ||
         nextProps.initialChecked !== this.props.initialChecked
       ) {
         this.actions.resetField(nextProps.name, nextProps)
@@ -50,9 +50,9 @@ export default function connectField(ComposedComponent) {
       const nextField = nextForm.fields[nextProps.name]
       if (!this.field) return true
       return (
-        !deepEqual(nextProps, this.props) ||
-        !deepEqual(nextField, this.field) ||
-        !deepEqual(nextForm, this.form)
+        !isEqual(nextProps, this.props) ||
+        !isEqual(nextField, this.field) ||
+        !isEqual(nextForm, this.form)
       )
     }
 

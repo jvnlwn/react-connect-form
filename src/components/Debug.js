@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { withForm } from "../connectors"
-import { deepEqual } from "../utils"
+import { isEqual } from "../utils"
 
 const getChanges = (prev, next) => {
   if (!prev) {
@@ -58,8 +58,8 @@ class Debug extends Component {
 
   shouldComponentUpdate(nextProps) {
     return (
-      !deepEqual(nextProps, this.props) ||
-      !deepEqual(nextProps.formState, this.props.formState)
+      !isEqual(nextProps, this.props) ||
+      !isEqual(nextProps.formState, this.props.formState)
     )
   }
 
