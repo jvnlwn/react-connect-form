@@ -586,7 +586,7 @@
           var _this5 = this;
 
           return Object.keys(this.state.fields).reduce(function (errors, name) {
-            if (_this5.state.fields[name].errors.length) {
+            if (_this5.state.fields[name].errors && _this5.state.fields[name].errors.length) {
               errors[name] = _this5.state.fields[name].errors;
             }
             return errors;

@@ -147,7 +147,7 @@ export default function connectForm(ComposedComponent) {
 
     get errors() {
       return Object.keys(this.state.fields).reduce((errors, name) => {
-        if (this.state.fields[name].errors.length) {
+        if (this.state.fields[name].errors && this.state.fields[name].errors.length) {
           errors[name] = this.state.fields[name].errors
         }
         return errors
