@@ -128,7 +128,7 @@ export default function connectForm(ComposedComponent) {
 
     get valid() {
       return Object.values(this.state.fields).every(
-        field => field.errors.length < 1
+        field => field.errors && field.errors.length < 1
       )
     }
 
@@ -297,7 +297,7 @@ export default function connectForm(ComposedComponent) {
             return
           }
           // TODO: make sure sync validation merges set states.
-          if (prevField.errors.length) {
+          if (prevField.errors && prevField.errors.length) {
             this.validateField(name, value)
           }
           return {

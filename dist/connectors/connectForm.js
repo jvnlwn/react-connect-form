@@ -265,7 +265,7 @@
               return;
             }
             // TODO: make sure sync validation merges set states.
-            if (prevField.errors.length) {
+            if (prevField.errors && prevField.errors.length) {
               _this.validateField(name, value);
             }
             return {
@@ -558,7 +558,7 @@
         key: "valid",
         get: function get() {
           return Object.values(this.state.fields).every(function (field) {
-            return field.errors.length < 1;
+            return field.errors && field.errors.length < 1;
           });
         }
       }, {
