@@ -7,7 +7,7 @@ class Field extends PureComponent {
 
   static propTypes = {
     render: PropTypes.func,
-    component: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+    component: PropTypes.oneOfType([PropTypes.element, PropTypes.func, PropTypes.string]),
   }
 
   static defaultProps = {
