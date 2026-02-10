@@ -46,7 +46,7 @@
   "peerDependencies": {
     "react": "^18",
     "react-dom": "^18",
-    "prop-types": "^18"
+    "prop-types": "^15"
   },
   "dependencies": {
     "object-assign": "^4.1.1",
