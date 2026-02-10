@@ -40,13 +40,13 @@
     "eslint-config-react-app": "^1.0.4",
     "eslint-plugin-babel": "^3.1.0",
     "eslint-plugin-react": "^4.2.3",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "peerDependencies": {
-    "react": "^15",
-    "react-dom": "^15",
-    "prop-types": "^15"
+    "react": "^18",
+    "react-dom": "^18",
+    "prop-types": "^18"
   },
   "dependencies": {
     "object-assign": "^4.1.1",
