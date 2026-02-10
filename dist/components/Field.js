@@ -132,7 +132,7 @@
   Field.displayName = "Field";
   Field.propTypes = {
     render: _propTypes2.default.func,
-    component: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.string])
+    component: _propTypes2.default.oneOfType([_propTypes2.default.element, _propTypes2.default.func, _propTypes2.default.string])
   };
   Field.defaultProps = {
     component: "input"
